@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600&family=Marhey:wght@400;600&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Gulzar&display=swap" rel="stylesheet">
+
+<title>Baby Invitation</title>
+
+<link rel="stylesheet" href="style.css">
+<style>
+   *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f8f5ef;
+    font-family:'Gulzar', serif;
+    overflow-x:hidden;
+}
+
+
+
+/*================ HERO ================*/
+
+.hero{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    background:url(hero.png) center center/cover no-repeat;
+
+}
+
+/* للموبايل */
+
+@media(max-width:768px){
+
+.hero{
+
+    aspect-ratio:3/4;
+
+}
+
+}
+
+
+
+/*================ SECTION 2 ================*/
+
+.info-section{
+
+    position:relative;
+
+    background:url(section2.jpg) center/cover no-repeat;
+
+    padding:90px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+/* بدون Blur */
+
+.cards-container{
+
+    position:relative;
+
+    width:100%;
+    max-width:340px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    gap:70px;
+
+}
+
+
+/* الحبل */
+
+.rope{
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:95%;
+
+    height:3px;
+
+    background:#b39669;
+
+    border-radius:10px;
+
+    box-shadow:0 2px 4px rgba(0,0,0,.15);
+
+}
+
+
+/* الكارت */
+
+.card{
+
+    position:relative;
+
+    width:100%;
+
+    padding:22px 18px;
+
+    border-radius:22px;
+
+    background:rgba(153,146,123,.55);
+
+    backdrop-filter:blur(10px);
+
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    text-align:center;
+
+    box-shadow:
+
+    0 15px 25px rgba(0,0,0,.18);
+
+}
+
+
+/* حركة مختلفة لكل كارت */
+
+.card1{
+
+    transform:rotate(-2deg);
+
+    animation:swing1 5s ease-in-out infinite;
+
+}
+
+.card2{
+
+    transform:rotate(2deg);
+
+    animation:swing2 5s ease-in-out infinite;
+
+}
+
+
+/* المشبك */
+
+.clip{
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:34px;
+
+    height:20px;
+
+    border-radius:4px;
+
+    background:linear-gradient(#d5b98b,#b88b55);
+
+    box-shadow:
+
+    inset 0 2px 2px rgba(255,255,255,.4),
+
+    0 2px 4px rgba(0,0,0,.18);
+
+}
+
+.clip::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-7px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:18px;
+
+    height:8px;
+
+    border:2px solid #8b6a42;
+
+    border-bottom:none;
+
+    border-radius:10px 10px 0 0;
+
+}
+
+
+/* العنوان */
+
+.card h2{
+
+    color:#4d3724;
+
+    font-size:24px;
+
+    margin-bottom:12px;
+
+}
+
+
+/* النص */
+
+.card p{
+
+    color:#4d3724;
+
+    font-size:18px;
+
+    line-height:2;
+
+}
+
+
+/* الحركة */
+
+@keyframes swing1{
+
+0%{transform:rotate(-2deg);}
+50%{transform:rotate(1deg);}
+100%{transform:rotate(-2deg);}
+
+}
+
+@keyframes swing2{
+
+0%{transform:rotate(2deg);}
+50%{transform:rotate(-1deg);}
+100%{transform:rotate(2deg);}
+
+}
+
+
+
+/*================ Tablet ================*/
+
+@media(max-width:768px){
+
+.info-section{
+
+padding:70px 18px;
+
+}
+
+.cards-container{
+
+max-width:300px;
+
+gap:45px;
+
+}
+
+.card{
+
+padding:20px 16px;
+
+}
+
+.card h2{
+
+font-size:22px;
+
+}
+
+.card p{
+
+font-size:16px;
+
+}
+
+.string{
+
+height:45px;
+
+top:-45px;
+
+}
+
+}
+
+
+
+/*================ Mobile صغير ================*/
+
+@media(max-width:430px){
+
+.cards-container{
+
+max-width:270px;
+
+}
+
+.card{
+
+padding:18px 15px;
+
+border-radius:18px;
+
+}
+
+.card h2{
+
+font-size:20px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+}
+
+}
+
+/*================ DRESS CODE ================*/
+
+.dress-section{
+
+    position:relative;
+
+    padding:90px 20px;
+
+    background:url(section2.jpg) center center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.dress-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.dress-content h2{
+
+    font-family:'Gulzar',serif;
+
+    color:#4d3724;
+
+    font-size:42px;
+
+    margin-bottom:5px;
+
+}
+
+.subtitle{
+
+    color:#6b5844;
+
+    font-size:18px;
+
+    margin-bottom:45px;
+
+}
+
+.colors{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.color-card{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.circle{
+
+    width:110px;
+
+    height:110px;
+
+    border-radius:50%;
+
+    border:5px solid rgba(255,255,255,.75);
+
+    box-shadow:
+
+    0 12px 25px rgba(0,0,0,.15),
+
+    inset 0 8px 15px rgba(255,255,255,.35);
+
+    transition:.35s;
+
+}
+
+.circle:hover{
+
+    transform:translateY(-10px) scale(1.08);
+
+}
+
+.color-card span{
+
+    color:#4d3724;
+
+    font-size:20px;
+
+    font-family:'Gulzar',serif;
+
+}
+
+/*================ Responsive ================*/
+
+@media(max-width:768px){
+
+.dress-section{
+
+padding:70px 15px;
+
+}
+
+.dress-content h2{
+
+font-size:34px;
+
+}
+
+.subtitle{
+
+font-size:16px;
+
+margin-bottom:35px;
+
+}
+
+.colors{
+
+gap:22px;
+
+}
+
+.circle{
+
+width:80px;
+
+height:80px;
+
+}
+
+.color-card span{
+
+font-size:18px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.colors{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+justify-items:center;
+
+gap:25px;
+
+}
+
+.circle{
+
+width:75px;
+
+height:75px;
+
+}
+
+}
+
+/*================ WISH SECTION ================*/
+
+.wish-section{
+
+    position:relative;
+
+    background:url("section2.jpg") center center/cover no-repeat;
+
+    padding:90px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+/* طبقة شفافة خفيفة */
+
+.wish-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+/* الكارت */
+
+.wish-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:100%;
+    max-width:480px;
+
+    padding:35px 28px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.38);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.45);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+    text-align:center;
+
+}
+
+/* العنوان */
+
+.wish-card h2{
+
+    font-family:'Gulzar',serif;
+
+    color:#4d3724;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+/* الوصف */
+
+.wish-text{
+
+    color:#6f5d4b;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    margin-bottom:28px;
+
+}
+
+/* الفورم */
+
+#wishForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/* الحقول */
+
+#wishForm input,
+#wishForm textarea{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,.75);
+
+    color:#4d3724;
+
+    font-family:'Gulzar',serif;
+
+    font-size:18px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+#wishForm input:focus,
+#wishForm textarea:focus{
+
+    background:white;
+
+    box-shadow:0 0 0 2px rgba(153,146,123,.35);
+
+}
+
+#wishForm textarea{
+
+    resize:none;
+
+    min-height:130px;
+
+}
+
+#wishForm input::placeholder,
+#wishForm textarea::placeholder{
+
+    color:#8f7d68;
+
+}
+
+/* زر الإرسال */
+
+#wishForm button{
+
+    width:170px;
+
+    margin:auto;
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#99927b;
+
+    color:white;
+
+    font-family:'Gulzar',serif;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+
+}
+
+#wishForm button:hover{
+
+    background:#847d67;
+
+    transform:translateY(-3px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+.wish-section{
+
+padding:70px 18px;
+
+}
+
+.wish-card{
+
+padding:28px 22px;
+
+}
+
+.wish-card h2{
+
+font-size:28px;
+
+}
+
+.wish-text{
+
+font-size:16px;
+
+}
+
+#wishForm input,
+#wishForm textarea{
+
+font-size:16px;
+
+padding:14px 16px;
+
+}
+
+#wishForm button{
+
+width:150px;
+
+font-size:17px;
+
+padding:9px 16px;
+
+}
+
+}
+
+/*================ GALLERY SECTION ================*/
+
+.gallery-section{
+
+    position:relative;
+
+    padding:80px 20px;
+
+    background:url("section2.jpg") center center/cover no-repeat;
+
+    overflow:hidden;
+
+}
+
+.gallery-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.gallery-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:750px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+.gallery-content h2{
+
+    font-family:'Gulzar',serif;
+
+    font-size:38px;
+
+    color:#4d3724;
+
+    margin-bottom:10px;
+
+}
+
+.gallery-content p{
+
+    color:#6d5b48;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/*================ GRID ================*/
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    justify-items:center;
+
+}
+
+
+
+/*================ CARD ================*/
+
+.gallery-item{
+
+    width:170px;
+
+    background:white;
+
+    padding:10px 10px 24px;
+
+    border-radius:16px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+
+
+/* الصور */
+
+.gallery-item img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+
+/* الميل */
+
+.item1{
+
+    transform:rotate(-4deg);
+
+    animation:float1 5s ease-in-out infinite;
+
+}
+
+.item2{
+
+    transform:rotate(3deg);
+
+    animation:float2 5s ease-in-out infinite;
+
+}
+
+.item3{
+
+    transform:rotate(2deg);
+
+    animation:float2 6s ease-in-out infinite;
+
+}
+
+.item4{
+
+    transform:rotate(-3deg);
+
+    animation:float1 6s ease-in-out infinite;
+
+}
+
+
+
+/* Hover */
+
+.gallery-item:hover{
+
+    transform:rotate(0deg) scale(1.07);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.18);
+
+}
+
+
+
+/* الحركة */
+
+@keyframes float1{
+
+    0%{
+
+        translate:0 0;
+
+    }
+
+    50%{
+
+        translate:0 -8px;
+
+    }
+
+    100%{
+
+        translate:0 0;
+
+    }
+
+}
+
+
+
+@keyframes float2{
+
+    0%{
+
+        translate:0 0;
+
+    }
+
+    50%{
+
+        translate:0 8px;
+
+    }
+
+    100%{
+
+        translate:0 0;
+
+    }
+
+}
+
+
+
+/*================ MOBILE ================*/
+
+@media(max-width:768px){
+
+.gallery-content h2{
+
+font-size:30px;
+
+}
+
+.gallery-content p{
+
+font-size:16px;
+
+margin-bottom:30px;
+
+}
+
+.gallery-grid{
+
+gap:16px;
+
+}
+
+.gallery-item{
+
+width:140px;
+
+padding:8px 8px 18px;
+
+}
+
+.gallery-item img{
+
+height:140px;
+
+}
+
+}
+
+
+
+@media(max-width:430px){
+
+.gallery-item{
+
+width:130px;
+
+}
+
+.gallery-item img{
+
+height:130px;
+
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero"></section>
+
+
+
+<!-- INFO -->
+
+<section class="info-section">
+
+
+<div class="cards-container">
+
+    <div class="rope"></div>
+
+    <div class="card card1">
+
+        <div class="clip"></div>
+
+        <h2>معنى الاسم</h2>
+
+        <p>
+            يعني الزيادة والعطاء من الله، ويرمز إلى الخير والبركة والجمال، وهو اسم نبي الله يوسف عليه السلام، صاحب الصبر والحكمة
+        </p>
+
+    </div>
+
+    <div class="card card2">
+
+        <div class="clip"></div>
+
+        <h2>تاريخ الحفل</h2>
+
+        <p>
+            ٢٨ أغسطس ٢٠٢٦
+            <br><br>
+            الساعة ٦ مساءً
+        </p>
+
+    </div>
+
+</div>
+
+</section>
+<!-- ================= DRESS CODE ================= -->
+
+<section class="dress-section">
+
+    <div class="overlay"></div>
+
+    <div class="dress-content">
+
+        <h2>Dress Code</h2>
+
+        <p class="subtitle">We'd love you to wear these colors</p>
+
+        <div class="colors">
+
+            <div class="color-card">
+                <div class="circle" style="background:#F6F1E7;"></div>
+                <span>Ivory</span>
+            </div>
+
+            <div class="color-card">
+                <div class="circle" style="background:#D9C5A0;"></div>
+                <span>Beige</span>
+            </div>
+
+            <div class="color-card">
+                <div class="circle" style="background:#B7C8A6;"></div>
+                <span>Sage</span>
+            </div>
+
+            <div class="color-card">
+                <div class="circle" style="background:#4d3724;"></div>
+                <span>Brown</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WISHES ================= -->
+
+<section class="wish-section">
+
+    <div class="wish-overlay"></div>
+
+    <div class="wish-card">
+
+        <h2>اترك أمنية صغيرة ليُوسُف</h2>
+
+<p class="wish-text">
+يسعدنا أن تترك اسمك وكلمة جميلة أو دعوة صادقة ليُوسُف، لتكون ذكرى جميلة تبقى معه دائمًا
+</p>
+
+<form id="wishForm">
+
+    <input
+        type="text"
+        placeholder="الاسم"
+        required
+    >
+
+    <textarea
+        rows="5"
+        placeholder="اكتب أمنيتك أو دعاءك ليُوسُف..."
+        required
+    ></textarea>
+
+    <button type="submit">
+        أرسل
+    </button>
+
+</form>
+
+    </div>
+
+</section>
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery-section">
+
+    <div class="gallery-overlay"></div>
+
+    <div class="gallery-content">
+
+        <h2>ذكريات صغيرة</h2>
+
+        <p>لحظات جميلة من عالم يوسف الصغير</p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item item1">
+                <img src="baby1.jpg" alt="Baby">
+            </div>
+
+            <div class="gallery-item item2">
+                <img src="baby2.jpg" alt="Baby">
+            </div>
+
+            <div class="gallery-item item3">
+                <img src="baby3.jpg" alt="Baby">
+            </div>
+
+            <div class="gallery-item item4">
+                <img src="baby4.jpg" alt="Baby">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+</body>
+</html>
